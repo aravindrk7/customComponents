@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="inputBox">
+        <div *ngFor="let option of selectionList" class="selectedOptions">
+            <p title="{{option}}">{{option}}</p>
+            <i class="fa fa-close" (click)="removeSelectedOption(option)"></i>
+        </div>
+    </div>
+    <i [ngClass]="open?'fa fa-chevron-up':'fa fa-chevron-down'" (click)="showOptions()"></i>
+    <div *ngIf="open" class="optionList">
+        <p *ngFor="let option of optionList" (click)="selectOption(option)">{{option}}</p>
+    </div>
+</div>

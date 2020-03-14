@@ -1,0 +1,84 @@
+.container {
+  position: relative;
+  width: 350px;
+  min-height: 50px;
+  background: #fbfbfb;
+  border: 1px solid rgb(236, 236, 236);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  &:hover {
+    border: 1px solid gainsboro;
+  }
+  .inputBox {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(20px, auto));
+    grid-gap: 5px;
+    cursor: pointer;
+
+    .selectedOptions {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 5px;
+      border: 1px solid gainsboro;
+      background: #eeee;
+      transition: .5s;
+      &:hover {
+        border: 1px solid #292929;
+        i {
+          color: #292929;
+        }
+      }
+      p {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        font-weight: bold;
+        font-size: 12px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      i {
+        padding: 5px;
+        color: #aaa;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .optionList {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    cursor: pointer;
+    background: #fbfbfb;
+    border: 1px solid rgb(236, 236, 236);
+    &:hover {
+      border: 1px solid gainsboro;
+    }
+    p {
+      user-select: none;
+      height: 100%;
+      border-bottom: 1px solid rgb(236, 236, 236);
+      padding: 10px;
+      &:hover {
+        background: gainsboro;
+      }
+    }
+  }
+}
